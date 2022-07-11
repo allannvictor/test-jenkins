@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/apiprodutos?createDatabaseIfNotExist=true
+    url: jdbc:mysql://mysql-container:3306/apiprodutos?createDatabaseIfNotExist=true
     username: root
     password: admin
