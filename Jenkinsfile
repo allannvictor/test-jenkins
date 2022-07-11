@@ -4,14 +4,13 @@ pipeline {
         stage('Build') {
             steps {
       		sh "chmod +x gradlew"
-    		sh "./gradlew clean build"
-    		sh "chmod 755 gradlew"
-    		sh "./gradlew check"
+    		sh "./gradlew clean build"    		
             }
         }
         stage('Test') {
             steps {
-                sh './gradlew test'
+                sh "chmod 755 gradlew"
+    		    sh "./gradlew check"
             }
         }
     }
