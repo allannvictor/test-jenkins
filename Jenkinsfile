@@ -8,10 +8,11 @@ pipeline {
             }
         }
         stage('Test') {
-        agent {
-            docker {
-                image 'mysql/mysql-server'
-                 args '--name mysql-container -e MYSQL_ROOT_PASSWORD=admin -p 3306:3306 -d mysql'}
+            agent {
+                docker {
+                    image 'mysql/mysql-server'
+                    args '--name mysql-container -e MYSQL_ROOT_PASSWORD=admin -p 3306:3306 -d mysql'
+                }
             }
             steps {
                 sh "chmod 755 gradlew"
