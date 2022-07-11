@@ -16,10 +16,12 @@ import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito.*
 import org.mockito.junit.jupiter.MockitoExtension
+import org.springframework.boot.test.context.SpringBootTest
 import java.math.BigDecimal
 import java.util.*
 
 
+@SpringBootTest(classes = [ProdutoServiceTest::class])
 @ExtendWith(MockitoExtension::class)
 class ProdutoServiceTest {
     @InjectMocks
