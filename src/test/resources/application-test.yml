@@ -3,5 +3,3 @@ spring:
     url: jdbc:mysql://localhost:3306/apiprodutos?createDatabaseIfNotExist=true
     username: root
     password: admin
-  flyway:
-    enabled: false
