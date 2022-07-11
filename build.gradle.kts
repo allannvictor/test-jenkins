@@ -61,6 +61,13 @@ tasks.withType<KotlinCompile> {
 	}
 }
 
+tasks.bootJar{
+	archiveFileName.set("application.jar")
+	manifest{
+	   attributes["mainClass"] = mainClass
+	}
+}
+
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
