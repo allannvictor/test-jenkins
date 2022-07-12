@@ -49,9 +49,18 @@ dependencies {
 
 	runtimeOnly("org.postgresql:postgresql")
 
-	runtimeOnly("com.h2database:h2")
+//	runtimeOnly("com.h2database:h2")
+//
+//	testRuntimeOnly("com.h2database:h2")
 
-	testRuntimeOnly("com.h2database:h2")
+	// https://mvnrepository.com/artifact/org.testcontainers/testcontainers
+	testImplementation("org.testcontainers:testcontainers:1.17.3")
+	// https://mvnrepository.com/artifact/org.testcontainers/junit-jupiter
+	testImplementation("org.testcontainers:junit-jupiter:1.17.3")
+// https://mvnrepository.com/artifact/org.testcontainers/postgresql
+	testImplementation("org.testcontainers:postgresql:1.17.3")
+
+
 
 }
 
