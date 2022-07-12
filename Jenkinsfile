@@ -1,6 +1,6 @@
 pipeline {
     //agent any
-    agent { docker { image 'openjdk:17' } }
+    //agent { docker { image 'openjdk:17' } }
     stages {
     stage('docker permission'){
         steps{
