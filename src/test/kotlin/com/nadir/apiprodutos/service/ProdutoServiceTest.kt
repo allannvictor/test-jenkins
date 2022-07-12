@@ -2,6 +2,8 @@ package com.nadir.apiprodutos.service
 
 import com.nadir.apiprodutos.components.ProdutoComponent
 import com.nadir.apiprodutos.entities.Produto
+import com.nadir.apiprodutos.exceptions.EstoqueNaoZeradoException
+import com.nadir.apiprodutos.exceptions.NotFoundException
 import com.nadir.apiprodutos.repositories.ProdutoRepository
 import com.nadir.apiprodutos.services.ProdutoService
 import io.mockk.every
@@ -10,16 +12,20 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertNotEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.api.extension.ExtendWith
+import org.mockito.Mockito.*
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.context.DynamicPropertyRegistry
 import org.springframework.test.context.DynamicPropertySource
 import org.testcontainers.containers.PostgreSQLContainer
 import org.testcontainers.junit.jupiter.Container
 import org.testcontainers.junit.jupiter.Testcontainers
+import java.math.BigDecimal
+import java.util.*
 
 
 @Testcontainers
