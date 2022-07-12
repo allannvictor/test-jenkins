@@ -24,23 +24,8 @@ import org.testcontainers.junit.jupiter.Testcontainers
 
 @Testcontainers
 @SpringBootTest
-//@ActiveProfiles("test")
 @ExtendWith(MockKExtension::class)
 class ProdutoServiceTest {
-
-//    companion object {
-//        @Container
-//        var container =  PostgreSQLContainer("postgres")
-//            .withUsername("postgres")
-//            .withPassword("docker")
-//            .withDatabaseName("postgres")
-//        @DynamicPropertySource
-//        fun properties(registry: DynamicPropertyRegistry) {
-//            registry.add("spring.datasource.url") { container.jdbcUrl }
-//            registry.add("spring.datasource.password") { container.password }
-//            registry.add("spring.datasource.username") { container.username }
-//        }
-//    }
 
     companion object {
         @Container
@@ -92,16 +77,16 @@ class ProdutoServiceTest {
         assertEquals(produtoList.size, products.size)
     }
 
-//    @Test
-//    fun `quando solicitado salva um produto no repository`() {
-//        produto = ProdutoComponent.createActiveProdutoEntity()
-//        every { produtoRepository.save(produto) } returns produto
-//
-//        val product = produtoService.save(produto)
-//
-//        verify(exactly = 1) { produtoRepository.save(any())}
-//        assertEquals(product, produto)
-//    }
+    @Test
+    fun `quando solicitado salva um produto no repository`() {
+        produto = ProdutoComponent.createActiveProdutoEntity()
+        every { produtoRepository.save(produto) } returns produto
+
+        val product = produtoService.save(produto)
+
+        verify(exactly = 1) { produtoRepository.save(any())}
+        assertEquals(product, produto)
+    }
 
 //    @Test
 //    fun `quando desativa um produto este é desativado`() {
