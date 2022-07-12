@@ -47,6 +47,8 @@ dependencies {
 
 	testImplementation("io.mockk:mockk:1.12.0")
 
+	runtimeOnly("org.postgresql:postgresql")
+
 }
 
 extra["springCloudVersion"] = "2021.0.3"
