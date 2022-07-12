@@ -2,10 +2,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQL8Dialect
   datasource:
     url: jdbc:mysql://localhost:3306/apiprodutostest?createDatabaseIfNotExist=true
     username: root
     password: admin
   flyway:
     enabled: false
+  
