@@ -1,5 +1,8 @@
 spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/apiprodutos?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/apiprodutostest?createDatabaseIfNotExist=true
     username: root
     password: admin
