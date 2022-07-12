@@ -24,7 +24,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	implementation("org.flywaydb:flyway-core:8.1.0")
+	implementation("org.flywaydb:flyway-core")
 	implementation("mysql:mysql-connector-java:8.0.29")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.amqp:spring-rabbit-test")
@@ -48,6 +48,10 @@ dependencies {
 	testImplementation("io.mockk:mockk:1.12.0")
 
 	runtimeOnly("org.postgresql:postgresql")
+
+	runtimeOnly("com.h2database:h2")
+
+	testRuntimeOnly("com.h2database:h2")
 
 }
 
