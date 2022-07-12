@@ -20,4 +20,4 @@ spring:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
       generate-ddl: true
   flyway:
-    enabled: false
+    enabled: true
