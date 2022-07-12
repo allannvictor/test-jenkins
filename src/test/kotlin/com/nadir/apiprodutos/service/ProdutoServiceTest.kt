@@ -18,7 +18,6 @@ import org.springframework.test.context.ActiveProfiles
 
 
 @SpringBootTest
-@ActiveProfiles("test")
 @ExtendWith(MockKExtension::class)
 class ProdutoServiceTest {
 
